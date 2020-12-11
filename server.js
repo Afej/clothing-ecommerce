@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
   });
 }
 
@@ -33,7 +33,7 @@ app.listen(port, (error) => {
 });
 
 app.get("/service-worker.js", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../", "build", "service-worker.js"));
+  res.sendFile(path.resolve(__dirname, "public", "service-worker.js"));
 });
 
 app.post("/payment", (req, res) => {
