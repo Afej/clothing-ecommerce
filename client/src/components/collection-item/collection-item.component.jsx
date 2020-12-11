@@ -20,7 +20,7 @@ const CollectionItem = ({ item, addItem }) => {
 
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <PriceContainer>${price}</PriceContainer>
       </CollectionFooterContainer>
 
       <AddButton inverted onClick={() => addItem(item)}>
