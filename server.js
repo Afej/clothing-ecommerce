@@ -32,12 +32,8 @@ app.listen(port, (error) => {
   console.log("Server running on port " + port);
 });
 
-// app.get("/service-worker.js", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "client/build", "service-worker.js"));
-// });
-
 app.get("/service-worker.js", (req, res) => {
-  res.send(path.resolve(__dirname, "../", build, "service-worker.js"));
+  res.sendFile(path.resolve(__dirname, "..", "build", "service-worker.js"));
 });
 
 app.post("/payment", (req, res) => {
