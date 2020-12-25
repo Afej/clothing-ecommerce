@@ -77,8 +77,8 @@ const SignUp = ({ signUpStart }) => {
   );
 };
 
-const mapStateToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => ({
   signUpStart: (signUpData) => dispatch(signUpStart(signUpData)),
 });
 
-export default connect(null, mapStateToProps)(SignUp);
+export default connect(null, mapDispatchToProps)(SignUp);
